@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>학생 상세 - 학원 관리 시스템</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <button class="back-btn" onclick="history.back()">← 이전으로</button>
+        
+        <div class="page-header">
+            <h2>👤 학생 상세 정보</h2>
+            <p id="studentNameHeader">김민수</p>
+        </div>
+
+        <div class="card">
+            <h3>📋 기본 정보</h3>
+            <div class="info-grid" id="basicInfo">
+                <!-- JavaScript로 생성 -->
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>📚 수업 정보</h3>
+            <div class="info-grid" id="classInfo">
+                <!-- JavaScript로 생성 -->
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>💬 상담 이력</h3>
+            <div style="margin-bottom: 20px;">
+                <button class="btn" onclick="showAddConsultationModal()">+ 상담 이력 추가</button>
+            </div>
+            <div id="consultationHistory">
+                <!-- JavaScript로 생성 -->
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>📊 출석 통계</h3>
+            <div class="info-grid">
+                <div class="info-item">
+                    <label>이번 달 출석률</label>
+                    <span>85% (17/20일)</span>
+                </div>
+                <div class="info-item">
+                    <label>총 출석 횟수</label>
+                    <span>45회</span>
+                </div>
+                <div class="info-item">
+                    <label>지각 횟수</label>
+                    <span>3회</span>
+                </div>
+                <div class="info-item">
+                    <label>결석 횟수</label>
+                    <span>2회</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 상담 이력 추가 모달 -->
+    <div id="consultationModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeConsultationModal()">&times;</span>
+            <h3>💬 상담 이력 추가</h3>
+            <form id="consultationForm">
+                <div class="form-group">
+                    <label for="consultationType">상담 유형</label>
+                    <select id="consultationType" name="consultationType" required>
+                        <option value="">선택하세요</option>
+                        <option value="학습 상담">학습 상담</option>
+                        <option value="학부모 상담">학부모 상담</option>
+                        <option value="진로 상담">진로 상담</option>
+                        <option value="생활 상담">생활 상담</option>
+                        <option value="기타">기타</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="consultationDate">상담 날짜</label>
+                    <input type="date" id="consultationDate" name="consultationDate" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="consultationContent">상담 내용</label>
+                    <textarea id="consultationContent" name="consultationContent" rows="4" required 
+                              placeholder="상담 내용을 자세히 입력해주세요"></textarea>
+                </div>
+                
+                <button type="submit" class="btn">저장하기</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="student-detail.js"></script>
+</body>
+</html>

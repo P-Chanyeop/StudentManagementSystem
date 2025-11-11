@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>출석부 - 학원 관리 시스템</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <button class="back-btn" onclick="location.href='index.html'">← 메인으로</button>
+        
+        <div class="page-header">
+            <h2>✅ 출석부</h2>
+            <p id="currentDate">2024년 11월 11일 (월)</p>
+        </div>
+
+        <div class="card">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <h3>📊 오늘의 출석 현황</h3>
+                <div>
+                    <button class="btn btn-secondary" onclick="sortByArrival()">등원순 정렬</button>
+                    <button class="btn btn-secondary" onclick="sortByDeparture()">하원순 정렬</button>
+                </div>
+            </div>
+            
+            <div class="progress-bar">
+                <div class="progress-fill" id="attendanceProgress" style="width: 60%"></div>
+            </div>
+            <p style="text-align: center; margin-top: 10px; color: #2E7D32;">
+                출석률: <span id="attendanceRate">60%</span> (3명 중 2명 출석)
+            </p>
+        </div>
+
+        <div class="card">
+            <table class="attendance-table">
+                <thead>
+                    <tr>
+                        <th>학생명</th>
+                        <th>수업시간</th>
+                        <th>등원시간</th>
+                        <th>하원시간</th>
+                        <th>출석</th>
+                        <th>비고</th>
+                        <th>상세</th>
+                    </tr>
+                </thead>
+                <tbody id="attendanceTableBody">
+                    <!-- 데이터는 JavaScript로 생성 -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- 학생 상세 정보 모달 -->
+    <div id="studentModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3>👤 학생 상세 정보</h3>
+            <div id="modalContent">
+                <!-- 모달 내용은 JavaScript로 생성 -->
+            </div>
+        </div>
+    </div>
+
+    <script src="attendance.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>수업 예약 - 학원 관리 시스템</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <button class="back-btn" onclick="location.href='index.html'">← 메인으로</button>
+        
+        <div class="page-header">
+            <h2>📅 수업 예약</h2>
+            <p>원하는 날짜와 시간을 선택하여 수업을 예약하세요</p>
+        </div>
+
+        <div id="success-message" class="success-message" style="display: none;">
+            예약이 완료되었습니다!
+        </div>
+
+        <div class="card">
+            <h3>📅 날짜 선택</h3>
+            <div class="calendar" id="calendar">
+                <!-- 캘린더는 JavaScript로 생성 -->
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>🕐 시간 선택</h3>
+            <div class="time-slots" id="timeSlots">
+                <div class="time-slot" data-time="14:00">14:00</div>
+                <div class="time-slot" data-time="15:00">15:00</div>
+                <div class="time-slot" data-time="16:00">16:00</div>
+                <div class="time-slot" data-time="17:00">17:00</div>
+                <div class="time-slot" data-time="18:00">18:00</div>
+                <div class="time-slot" data-time="19:00">19:00</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>👤 예약자 정보</h3>
+            <form id="reservationForm">
+                <div class="form-group">
+                    <label for="motherName">어머니 성함 *</label>
+                    <input type="text" id="motherName" name="motherName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="motherPhone">어머니 연락처 *</label>
+                    <input type="tel" id="motherPhone" name="motherPhone" placeholder="010-0000-0000" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="studentName">학생 이름 *</label>
+                    <input type="text" id="studentName" name="studentName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="studentPhone">학생 연락처</label>
+                    <input type="tel" id="studentPhone" name="studentPhone" placeholder="010-0000-0000">
+                </div>
+                
+                <div class="form-group">
+                    <label for="requests">요청사항</label>
+                    <textarea id="requests" name="requests" rows="3" placeholder="특별한 요청사항이 있으시면 적어주세요"></textarea>
+                </div>
+                
+                <button type="submit" class="btn">예약하기</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="reservation.js"></script>
+</body>
+</html>
