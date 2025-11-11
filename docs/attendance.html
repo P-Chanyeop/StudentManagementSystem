@@ -5,19 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>출석부 - 학원 관리 시스템</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <div class="container">
         <button class="back-btn" onclick="location.href='index.html'">← 메인으로</button>
         
         <div class="page-header">
-            <h2>✅ 출석부</h2>
+            <h2><i class="fas fa-clipboard-check"></i> 출석부</h2>
             <p id="currentDate">2024년 11월 11일 (월)</p>
         </div>
 
         <div class="card">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
-                <h3>📊 오늘의 출석 현황</h3>
+                <h3><i class="fas fa-chart-bar"></i> 오늘의 출석 현황</h3>
                 <div>
                     <button class="btn btn-secondary" onclick="sortByArrival()">등원순 정렬</button>
                     <button class="btn btn-secondary" onclick="sortByDeparture()">하원순 정렬</button>

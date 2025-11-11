@@ -5,32 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>학생 상세 - 학원 관리 시스템</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <div class="container">
         <button class="back-btn" onclick="history.back()">← 이전으로</button>
         
         <div class="page-header">
-            <h2>👤 학생 상세 정보</h2>
+            <h2><i class="fas fa-user-graduate"></i> 학생 상세 정보</h2>
             <p id="studentNameHeader">김민수</p>
         </div>
 
         <div class="card">
-            <h3>📋 기본 정보</h3>
+            <h3><i class="fas fa-id-card"></i> 기본 정보</h3>
             <div class="info-grid" id="basicInfo">
                 <!-- JavaScript로 생성 -->
             </div>
         </div>
 
         <div class="card">
-            <h3>📚 수업 정보</h3>
+            <h3><i class="fas fa-book"></i> 수업 정보</h3>
             <div class="info-grid" id="classInfo">
                 <!-- JavaScript로 생성 -->
             </div>
         </div>
 
         <div class="card">
-            <h3>💬 상담 이력</h3>
+            <h3><i class="fas fa-comments"></i> 상담 이력</h3>
             <div style="margin-bottom: 20px;">
                 <button class="btn" onclick="showAddConsultationModal()">+ 상담 이력 추가</button>
             </div>
@@ -40,7 +41,7 @@
         </div>
 
         <div class="card">
-            <h3>📊 출석 통계</h3>
+            <h3><i class="fas fa-chart-pie"></i> 출석 통계</h3>
             <div class="info-grid">
                 <div class="info-item">
                     <label>이번 달 출석률</label>
@@ -66,7 +67,7 @@
     <div id="consultationModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeConsultationModal()">&times;</span>
-            <h3>💬 상담 이력 추가</h3>
+            <h3><i class="fas fa-plus-circle"></i> 상담 이력 추가</h3>
             <form id="consultationForm">
                 <div class="form-group">
                     <label for="consultationType">상담 유형</label>
